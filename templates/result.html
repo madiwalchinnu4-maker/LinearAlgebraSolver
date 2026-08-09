@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ operation }} • Linear Algebra Solver</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+  <div class="brand">∑ Linear Algebra Solver</div>
+  <div class="subtitle">Result</div>
+</header>
+<main>
+  <section class="card result-card">
+    <p class="tag">SOLUTION</p>
+    <h1>{{ operation }}</h1>
+
+    {% if error %}
+      <div class="error">{{ error }}</div>
+    {% else %}
+      <div class="answer">{{ result }}</div>
+      <h2>Steps</h2>
+      <p class="steps">{{ steps }}</p>
+    {% endif %}
+
+    <a class="back" href="/">← Solve another matrix</a>
+  </section>
+</main>
+<footer>Linear Algebra Solver • Roma Asrani &amp; Kirti</footer>
+</body>
+</html>

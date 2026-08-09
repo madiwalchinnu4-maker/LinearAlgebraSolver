@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linear Algebra Solver</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+  <div class="brand">∑ Linear Algebra Solver</div>
+  <div class="subtitle">Python Flask Web Application</div>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="tag">COLLEGE PROJECT • GROUP</p>
+    <h1>Linear Algebra Solver</h1>
+    <p>Matrix Operations &amp; Step-by-Step Solutions</p>
+    <div class="members">Kirti Madiwal &nbsp;•&nbsp; Roma Asrani</div>
+  </section>
+
+  <section class="card">
+    <h2>Matrix Solver</h2>
+    <p class="hint">Enter one row per line. Separate values with commas.</p>
+
+    <form action="/solve" method="post">
+      <label for="operation">Choose an operation</label>
+      <select id="operation" name="operation">
+       <option value="determinant">Determinant</option>
+       <option value="inverse">Matrix Inverse</option>
+       <option value="transpose">Transpose</option>
+       <option value="linear_equations">Linear Equations</option>
+       <option value="vectors">Vectors</option>
+       <option value="eigenvalues">Eigenvalues</option>
+      </select>
+
+      <label for="matrix">Matrix</label>
+      <textarea id="matrix" name="matrix" placeholder="1,2
+3,4" required></textarea>
+
+      <button type="submit">Solve Matrix →</button>
+    </form>
+  </section>
+
+  <section class="features">
+    <div class="feature"><b>01</b><span>Matrix Operations</span></div>
+    <div class="feature"><b>02</b><span>Exact Answers</span></div>
+    <div class="feature"><b>03</b><span>Step-by-Step</span></div>
+  </section>
+</main>
+<footer>Linear Algebra Solver • Roma Asrani &amp; Kirti Madiwal</footer>
+</body>
+</html>
